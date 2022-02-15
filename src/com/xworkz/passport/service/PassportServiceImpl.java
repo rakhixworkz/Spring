@@ -37,11 +37,11 @@ public boolean saveAndValidate(PassportEntity entity) {
 		valid = false;
 		return valid;
 	}if (entity.getPassportNo() != null && 
-		entity.getPassportNo().length() == 9) {
+		entity.getPassportNo().length() == 9 && entity.getPassportNo().toUpperCase().startsWith("A")) {
 		valid = true;
 
 	} else {
-		System.out.println("Invalid IssuedBy");
+		System.out.println("Invalid passport number ");
 		valid = false;
 		return valid;
 	}if (entity.getPassportpersonneltype() != null) {
@@ -64,13 +64,6 @@ public boolean saveAndValidate(PassportEntity entity) {
 		valid = true;	
 	} else {
 		System.out.println("Invalid Address ");
-		valid = false;
-		return valid;
-	}if (entity.getPassportNo()!=null && 
-		entity.getPassportNo().startsWith("", 0)){
-		valid = true;				
-	} else {
-		System.out.println("Invalid passport no ");
 		valid = false;
 		return valid;
 	}if (entity.getIssuedAt()!=null) {
