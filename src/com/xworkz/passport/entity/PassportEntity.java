@@ -1,5 +1,6 @@
 package com.xworkz.passport.entity;
-	import java.time.LocalDateTime;
+	import java.time.LocalDate;
+import java.time.LocalDateTime;
 	import java.util.Date;
 	import javax.persistence.Column;
 	import javax.persistence.Entity;
@@ -39,7 +40,7 @@ package com.xworkz.passport.entity;
 		@Column(name = "p_passportpersonneltype")
 		private PassportPersonnelType passportpersonneltype;
 		@Column(name = "p_dob")
-		private Date dob;	
+		private LocalDateTime dob;	
 		@Column(name = "p_bloodgrop")
 		private BloodGroup bloodgrop;
 		@Column(name = "p_verifiedDocument")
@@ -47,7 +48,7 @@ package com.xworkz.passport.entity;
 		
 		public PassportEntity(String issuedBy, LocalDateTime issuedAt, LocalDateTime expiresAt, Gender gender,
 				String passportNo, String address, String fName, boolean legalIssue,
-				PassportPersonnelType passportpersonneltype, Date dob, BloodGroup bloodgrop,
+				PassportPersonnelType passportpersonneltype, LocalDateTime dob, BloodGroup bloodgrop,
 				VerifiedDocument verifiedDocument) {
 			super();
 			this.issuedBy = issuedBy;
@@ -64,10 +65,5 @@ package com.xworkz.passport.entity;
 			this.verifiedDocument = verifiedDocument;
 		}
 
-		public PassportEntity(String issuedBy2, LocalDateTime now, LocalDateTime now2, char c, String passportNo2,
-				String address2, String fName2, boolean legalIssue2, String string, String string2, String string3,
-				String string4) {
-			// TODO Auto-generated constructor stub
-		}
 		
 	}
