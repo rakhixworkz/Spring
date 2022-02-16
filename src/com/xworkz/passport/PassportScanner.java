@@ -19,8 +19,8 @@ public class PassportScanner {
 	public static void main(String[] args) {
 		PassportEntity entity = new PassportEntity
 				( "Passport authority of india", LocalDateTime.of(2022,4,5,13,43,37), LocalDateTime.of(2035,5,6,12,12), Gender.Male,
-				"A3119585", "Bangalore,karnataka", "Rehana Mulla", false, PassportPersonnelType.Regular, LocalDateTime.now(),
-				BloodGroup.A_Positive, VerifiedDocument.ADHAR);
+				"A3119585", "Bangalore,karnataka", "Rakhi kumari", false, PassportPersonnelType.Diplomatic, LocalDateTime.now(),
+				BloodGroup.B_Positive, VerifiedDocument.DRIVING_LICENCE);
 		PassportRepository repo=new PassportRepositoryImpl();
 		PassportService service=new PassportServiceImpl(repo);
 		service.saveAndValidate(entity);
