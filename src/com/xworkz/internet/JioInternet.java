@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class JioInternet implements Internet{
-	@Autowired
+	private String vendor;
+	private int cost;
 
 	@Override
 	public void connect() {
